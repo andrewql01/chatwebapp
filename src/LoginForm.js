@@ -3,7 +3,6 @@ import { useState } from "react";
 import {useNavigate} from "react-router-dom"
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
-import ServerQueries from './ServerQueries';
 // Your web app's Firebase configuration
 const firebaseConfig = {
 apiKey: "AIzaSyBfkaotP8-SSzs_8WcwvcNSBSvtfiBviCs",
@@ -53,7 +52,6 @@ const LoginForm = () => {
   }
   return(
     <form className="authForm">
-      <ServerQueries/>
               <div className="inputRow">
             <div className="iconInputHolder"><i className="inputIcon fa-sharp fa-solid fa-user"></i></div>
             <input type="text" className="usernameInput" id="usernameInp" value={email} onChange={handleEmailChange}/>
